@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #191c21;
+      color: #f4f6fa;
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-top: 3rem;
+      color: #7af4dd;
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 3px 18px rgba(122,244,221,0.12);
+    }
+    .card {
+      background: #22232b;
+      border: 1px solid #374151;
+      border-radius: 14px;
+      padding: 2rem 1.7rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+      width: 350px;
+      max-width: 97vw;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    input[type="text"],input[type="password"] {
+      padding: 0.8rem 0.7rem;
+      background: #23272f;
+      color: #fff;
+      border: 1px solid #313a46;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.16s;
+    }
+    input:focus {
+      border: 1.2px solid #7af4dd;
+      outline: none;
+    }
+    button {
+      background: linear-gradient(90deg,#7af4dd 0%, #97ffa8 100%);
+      color: #232323;
+      font-weight: 650;
+      padding: 0.7rem 1.1rem;
+      border: none;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      font-size: 1.03rem;
+      box-shadow: 0 1px 10px rgba(122,244,221,0.09);
+      cursor: pointer;
+      transition: background 0.16s, color 0.16s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #97ffa8 0%, #7af4dd 100%);
+      color: #131313;
+    }
+    .info {
+      text-align: center;
+      margin-top: 2rem;
+      color: #bcc9d9;
+      font-size: 1.07rem;
+    }
+    a {
+      color: #7af4dd;
+      text-decoration: none;
+      margin-left: 4px;
+      transition: color 0.13s;
+      font-weight: 500;
+    }
+    a:hover {
+      color: #ff8080;
+    }
+    @media (max-width:600px) {
+      .card { min-width:95vw; padding:1rem 0.3rem;}
+      h1 { font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <div class="card">
+    <form method="post" action="/signup">
+      <input name="username" type="text" placeholder="Username" required autocomplete="username">
+      <input name="password" type="password" placeholder="Password" required autocomplete="new-password">
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+  <div class="info">
+    Have an account?
+    <a href="/login">Login</a>
+  </div>
+</body>
+</html>
